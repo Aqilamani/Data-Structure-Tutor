@@ -1,27 +1,27 @@
 class Telephone{
-    int areaCode;
-    int number;
+    String areaCode;
+    String number;
 
     static int numberOfTelephoneObjects=0;
 
-    public Telephone(int areaCode,int number){
+    public Telephone(String areaCode,String number){
         this.areaCode=areaCode;
         this.number=number;
     }
 
-    public int getAreaCode() {
+    public String getAreaCode() {
         return areaCode;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setAreaCode(int areaCode) {
+    public void setAreaCode(String areaCode) {
         this.areaCode = areaCode;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
     public String MakePhoneNumber(){
@@ -30,7 +30,15 @@ class Telephone{
 }
 public class Q1 {
     public static void main(String[] args) throws Exception {
-       Telephone myPhone=new Telephone(60,182024030);
-       System.out.println("My Phone Number:"+ myPhone.MakePhoneNumber());
+       Telephone[] myPhone=new Telephone[5];
+       
+       for(int i=0;i<myPhone.length;i++){
+        myPhone[i]=new Telephone("03","7967630"+i);
+       }
+
+       for(Telephone phone:myPhone){
+        System.out.println(phone.MakePhoneNumber());
+       }
     }
 }
+
