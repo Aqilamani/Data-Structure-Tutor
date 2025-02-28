@@ -1,0 +1,36 @@
+class Telephone{
+    int areaCode;
+    int number;
+
+    static int numberOfTelephoneObjects=0;
+
+    public Telephone(int areaCode,int number){
+        this.areaCode=areaCode;
+        this.number=number;
+    }
+
+    public int getAreaCode() {
+        return areaCode;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setAreaCode(int areaCode) {
+        this.areaCode = areaCode;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+    public String MakePhoneNumber(){
+        return areaCode + "-" + number;
+    }
+}
+public class Q1 {
+    public static void main(String[] args) throws Exception {
+       Telephone myPhone=new Telephone(60,182024030);
+       System.out.println("My Phone Number:"+ myPhone.MakePhoneNumber());
+    }
+}
