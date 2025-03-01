@@ -1,0 +1,27 @@
+abstract class Vehicle{
+    double maxSpeed;
+
+    public double getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    public double getCurrentSpeed() {
+        return currentSpeed;
+    }
+
+    public Vehicle(double maxSpeed) {
+        this.maxSpeed = maxSpeed;
+        this.currentSpeed=0;
+    }
+
+    protected double currentSpeed;
+
+    public abstract void accelerate();
+
+    public void pedaltothemedal(){
+        while(currentSpeed<maxSpeed){
+            accelerate();
+        }
+    }
+}
+/*No because Vehicle is abstract.Thus,It cannot be instatiated directly */
