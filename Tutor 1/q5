@@ -1,0 +1,41 @@
+interface Account{
+    int deposit(int amount);
+    boolean withdraw(int amount);
+}
+
+class BankAccount implements Account{
+    private int balance;
+
+    public BankAccount(int initialbalance) {
+        this.balance = initialbalance;
+    }
+
+@Override
+public int deposit(int amount){
+    balance+=amount;
+    return balance;
+}
+@Override
+public boolean withdraw(int amount){
+    if(amount<balance){
+        balance-=amount;
+        return true;
+    }else{
+        return false;
+    }
+}
+public int getBalance() {
+    return balance;
+}
+
+}
+public class Q5 {
+    public static void main(String[] args) {
+        BankAccount myAccount=new BankAccount(1000);
+        System.out.println("Initial balance:"+ myAccount.getBalance());
+        myAccount.deposit(500);
+        System.out.println("After deposit:"+myAccount.getBalance());
+        myAccount.withdraw(200);
+        System.out.println("After withdraw:"+myAccount.getBalance());
+    }
+}
