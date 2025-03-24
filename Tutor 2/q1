@@ -1,1 +1,23 @@
-a
+public class Container<T> {
+    private T t;
+
+    public Container() {
+    }
+    public void add(T t){
+        this.t=t;
+    }
+    public T retrieve(){
+        return t;
+    }
+    public static void main(String[] args) throws Exception {
+        Container<String> contain1=new Container<>();
+        Container<Integer> contain2=new Container<>();
+
+        contain1.add("Java");
+        contain2.add(50);
+
+        System.out.println("String Value: " + contain1.retrieve());
+        System.out.println("Integer Value: " + contain2.retrieve());
+    }
+}
+
