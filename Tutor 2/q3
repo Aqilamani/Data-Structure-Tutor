@@ -1,0 +1,3 @@
+Raw type: a generic class or interface used without specifying a concrete type or without a type parameter.
+Why Unsafe?:Can lead to runtime errors due to incorrect type assumptions.
+Why raw type is allowed in java?:Before Java 5, collections like ArrayList did not support generics.Allowing raw types ensures older code can still compile and run.
