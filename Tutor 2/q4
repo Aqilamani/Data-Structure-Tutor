@@ -1,0 +1,2 @@
+What is erasure?: Compiler uses the generic type information to compile the code ,but erases it afterwards.
+Why are Java generics implements using erasure?: Java generics were implemented with type erasure mainly for backward compatibility and performance reasons.
