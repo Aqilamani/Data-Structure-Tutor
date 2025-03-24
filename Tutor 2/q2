@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+
+public class q2 {
+    public static void main(String[] args) {
+        ArrayList<Integer> number=new ArrayList<>();
+        ArrayList<String> name=new ArrayList<>();
+        ArrayList<Character> alphabet=new ArrayList<>();
+
+        number.add(1);
+        number.add(2);
+        number.add(3);
+        number.add(4);
+        number.add(5);
+
+        name.add("Jane");
+        name.add("Tom");
+        name.add("Bob");
+
+        alphabet.add('a');
+        alphabet.add('b');
+        alphabet.add('c');
+
+        print(number);
+        print(name);
+        print(alphabet);
+    }
+
+    public static <T> void print(ArrayList<T> list){
+        for(int i=0;i<list.size() ;i++){
+            System.out.print(list.get(i)+" ");
+        }
+        System.out.println();
+    }
+}
