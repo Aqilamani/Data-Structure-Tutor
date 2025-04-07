@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+
+public class q7 {
+    public static void main(String[] args) {
+        ArrayList<String> vehicle = new ArrayList<>();
+        ArrayList<Object> transportation = new ArrayList<>();
+        vehicle.add("Car");
+        vehicle.add("Bus");
+
+        transportation.add("LRT");
+        transportation.add("Monorel");
+
+        allTransportation(vehicle, transportation);
+    }
+
+    public static void allTransportation(ArrayList<? extends String> vehicle, ArrayList<? super String> transportation) {
+        
+        transportation.addAll(vehicle);
+
+        System.out.println("All Transportation: " + transportation);
+    }
+    
+}
