@@ -1,0 +1,1 @@
+When the argument parsed into the method is non-negative (n>-1), the method will be executed infinitely, causing a StackOverflowError. 
