@@ -1,0 +1,9 @@
+public class Digit {
+    public void printDigits(int n) {
+        if (n < 10) { // base case
+            System.out.print(n + " ");
+        } else {
+            printDigits(n / 10); // recursive case
+            System.out.print(n % 10 + " ");
+        }
+    }
