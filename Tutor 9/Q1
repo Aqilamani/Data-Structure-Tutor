@@ -1,0 +1,2 @@
+The problem that will occur is that it will run infinitely because the base case only covers when the integer starts from 1 and not 0.StackOverFlowError
+will be outputted as the memory stack exceeds the limit the compiler allows to prevent the program from eating too much memory in the computer
